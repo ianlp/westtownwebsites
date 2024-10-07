@@ -1,0 +1,121 @@
+---
+// This is an Astro component
+
+const testimonials = [
+  {
+    image: "/assets/images/dawn-gluskin.jpg",
+    alt: "Woman smiling, seated in a comfortable chair",
+    rating: 5,
+    quote:
+      "We hired Ian for two web projects: SolTecLabs.com & SolTecElectronics.com and would highly recommend his work. With just a small amount of direction given, Ian was able to create two well-designed sites that showcased our content and capabilities beautifully! His after-design follow-up is excellent as he worked closely with us on ironing out any/all small details until everything was perfected (unlike some web-designers that disappear when the check clears the bank!) Ian is somebody that you can count on long-term to work with you as your web-site needs continue to change and grow. His graphic art capabilities and creativity are quite impressive as well - great logo design work & web-page interface that all blend together nicely. He's quick to return an email or phone call & works within deadlines given too. Thanks Ian!",
+    author: {
+      name: "Dawn",
+      title: "President & CEO - Soltec Electronics",
+    },
+  },
+];
+
+// I've worked with a few developers and choosing a new one always
+//           makes me cringe because you never know what you are going to get. I
+//           am so relieved that I do not have to search for a new developer. I
+//           will choose IanLP over and over again for all my future websites.
+//           His coding is clean, he always delivers a superior product. He
+//           exceeded my expectations on every aspect of this project. Even when
+//           I was slow to provide assets, he never complained that I was way
+//           behind schedule. Thanks Ian!" —
+
+// This was a great experience! My company was in a very bad position
+//           after paying a web designer with poor skills. Ian picked up the ball
+//           and saved us!!!! A true professional, hard working and an excellent
+//           designer, he can think outside of the box and understands how to
+//           bring your vision to life!!!! Overall we are more than pleased with
+//           the work he provided on this project and can see him working on even
+//           greater projects in the future. His response time was great and we
+//           would recommend him to our friends and associates.
+
+// const handlePrevClick = () => {
+//   setCurrentIndex(
+//     (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+//   );
+// };
+
+// const handleNextClick = () => {
+//   setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
+// };
+---
+
+<section class="testimonial">
+  <div class="cs-container">
+    <span class="cs-topper">Our Reviews</span>
+    <h2 class="cs-title">Words From Our Customers</h2>
+  </div>
+
+  {
+    testimonials.map((testimonial, index) => (
+      <div class="testimonial__container" key={index}>
+        <div class="testimonial__image-wrapper">
+          <img
+            src={testimonial.image}
+            alt={testimonial.alt}
+            class="testimonial__image"
+          />
+        </div>
+        <div class="testimonial__content">
+          <div class="testimonial__rating">
+            {[...Array(testimonial.rating)].map((_, i) => (
+              <span
+                class="testimonial__star"
+                aria-hidden="true"
+                key={`star-${i}`}
+              >
+                &#9733;
+              </span>
+            ))}
+            <span class="sr-only">{testimonial.rating} out of 5 stars</span>
+          </div>
+          <blockquote class="testimonial__quote">
+            <p>{testimonial.quote}</p>
+          </blockquote>
+          <footer class="testimonial__author">
+            <p class="testimonial__author-name">{testimonial.author.name}</p>
+            <p class="testimonial__author-title">{testimonial.author.title}</p>
+          </footer>
+        </div>
+      </div>
+    ))
+  }
+</section>
+
+<style lang="scss">
+  .testimonial {
+    background: var(--primary);
+    padding: var(--sectionPadding);
+  }
+
+  .cs-topper {
+    color: var(--bodyTextColorWhite);
+  }
+
+  .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+
+  .testimonial__content {
+    color: var(--bodyTextColorWhite);
+  }
+
+  .testimonial__content p {
+    color: var(--bodyTextColorWhite);
+  }
+
+  .testimonial__container {
+    @media screen and (min-width: 48rem) {
+      display: grid;
+      grid-template-columns: 400px auto;
+    }
+  }
+
+  .testimonial__image-wrapper img {
+    width: 100%;
+  }
+</style>

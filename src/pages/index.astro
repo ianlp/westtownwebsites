@@ -1,0 +1,1157 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+import CTA from "@components/CTA.astro";
+import TopInfoCards from "@components/TemplateComponents/TopInfoCards.astro";
+import Introduction from "@components/TemplateComponents/Introduction.astro";
+import Pricing from "@components/TemplateComponents/Pricing.astro";
+import Services from "@components/TemplateComponents/Services.astro";
+import Review from "@components/TemplateComponents/Review.astro";
+import ServicesSlider from "@components/TemplateComponents/ServicesTabs.jsx";
+
+import Hero from "@components/TemplateComponents/Hero.astro";
+import InteractiveGrid from "@components/TemplateComponents/InteractiveGrid.astro";
+---
+
+<BaseLayout
+  title="West Town Websites | Affordable Web Design Services for Small Business | Custom Web Page Design"
+  description="Chicago's affordable web design services for small business owners. Get a custom small business web page design starting at just $175/month with our expert web page designers."
+>
+  <Hero />
+
+  <Introduction />
+
+  <!-- <InteractiveGrid /> -->
+  <!-- <TopInfoCards /> -->
+
+  <Services />
+
+  <!-- <TopInfoCards /> -->
+
+  <!-- <section id="services" class="services">
+    <div class="mil-lines-place">
+      <svg
+        width="250"
+        viewBox="0 0 300 1404"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="mil-lines"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M1 892L1 941H299V892C299 809.71 232.29 743 150 743C67.7096 743 1 809.71 1 892ZM0 942H300V892C300 809.157 232.843 742 150 742C67.1573 742 0 809.157 0 892L0 942Z"
+          class="mil-move"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M299 146V97L1 97V146C1 228.29 67.7096 295 150 295C232.29 295 299 228.29 299 146ZM300 96L0 96V146C0 228.843 67.1573 296 150 296C232.843 296 300 228.843 300 146V96Z"
+          class="mil-move"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M299 1H1V1403H299V1ZM0 0V1404H300V0H0Z"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M150 -4.37115e-08L150 1404L149 1404L149 0L150 -4.37115e-08Z"
+        ></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M150 1324C232.29 1324 299 1257.29 299 1175C299 1092.71 232.29 1026 150 1026C67.7096 1026 1 1092.71 1 1175C1 1257.29 67.7096 1324 150 1324ZM150 1325C232.843 1325 300 1257.84 300 1175C300 1092.16 232.843 1025 150 1025C67.1573 1025 0 1092.16 0 1175C0 1257.84 67.1573 1325 150 1325Z"
+          class="mil-move"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M300 1175H0V1174H300V1175Z"
+          class="mil-move"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M150 678C232.29 678 299 611.29 299 529C299 446.71 232.29 380 150 380C67.7096 380 1 446.71 1 529C1 611.29 67.7096 678 150 678ZM150 679C232.843 679 300 611.843 300 529C300 446.157 232.843 379 150 379C67.1573 379 0 446.157 0 529C0 611.843 67.1573 679 150 679Z"
+          class="mil-move"></path>
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M299 380H1V678H299V380ZM0 379V679H300V379H0Z"
+          class="mil-move"></path>
+      </svg>
+    </div>
+    <div class="card">
+      <picture>
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="/assets/svgs/service1.svg"
+          alt="appliance"
+          width="48"
+          height="48"
+        />
+      </picture>
+      <h2>SEO-enhanced</h2>
+      <p>
+        We'll implement the latest search engine optimization techniques to
+        ensure your site ranks high in search results, making it easy for
+        potential customers to find you.
+      </p>
+    </div>
+    <div class="card">
+      <picture>
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="/assets/svgs/service2.svg"
+          alt="appliance"
+          width="48"
+          height="48"
+        />
+      </picture>
+      <h2>Professionally designed:</h2>
+      <p>
+        Our team of experts will create a visually stunning and user-friendly
+        website that reflects your brand's unique identity and values.
+      </p>
+    </div>
+    <div class="card">
+      <picture>
+        <img
+          aria-hidden="true" 
+          decoding="async"
+          src="/assets/svgs/service3.svg"
+          alt="appliance"
+          width="48"
+          height="48"
+        />
+      </picture>
+      <h2>Lead-generating:</h2>
+      <p>
+        We'll strategically incorporate calls to action and lead capture forms
+        to convert website visitors into valuable leads.
+      </p>
+    </div>
+  </section> -->
+
+  <!-- <section class="section gradient-green">
+    <h1>HOME PAGE</h1>
+  </section>
+  <section class="section gradient-blue">
+    <div class="box">Service 1</div>
+  </section>
+  <section class="section gradient-orange">
+    <div class="box">Service 2</div>
+  </section>
+  <section class="section gradient-purple">
+    <div class="box">Service 3</div>
+  </section>
+
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      background: red; /* Change as needed */
+      margin: 20px;
+    }
+  </style>
+
+  <script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+    let ctx;
+
+    document.addEventListener("astro:page-load", () => {
+      ScrollTrigger.disable(false);
+      ScrollTrigger.enable();
+      ctx && ctx.revert();
+
+      ctx = gsap.context(() => {
+        gsap.utils.toArray(".box").forEach((box) => {
+          gsap.to(box, {
+            rotation: 360,
+            scrollTrigger: {
+              trigger: box,
+              start: "top center",
+              end: "bottom center",
+              toggleActions: "play none none reverse",
+              markers: {
+                startColor: "white",
+                endColor: "white",
+                fontWeight: "bold",
+              },
+            },
+          });
+        });
+      });
+    });
+  </script> -->
+
+  <!-- ============================================ -->
+  <!--                 Pricing                 -->
+  <!-- ============================================ -->
+
+  <Pricing />
+
+  <!-- ============================================ -->
+  <!--                   Gallery                    -->
+  <!-- ============================================ -->
+
+  <!-- <section id="gallery">
+    <div class="cs-container">
+      <span class="cs-topper">Our Portfolio</span>
+      <h2 class="cs-title">
+        Et orci volutpat, back up generator installations
+      </h2>
+      <BaseLayout class="cs-image-group">
+       
+  <div class="cs-row cs-row-1">
+    
+    <picture class="cs-picture cs-picture1">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port1-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port1.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port1.jpg"
+        alt="new hallway"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+    <picture class="cs-picture cs-picture2">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port4-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port4.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port4.jpg"
+        alt="new home construction"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+    <picture class="cs-picture cs-picture3">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port7-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port7.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port7.jpg"
+        alt="building a new wall"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+  </div>
+ 
+  <div class="cs-row cs-row-2">
+   
+    <picture class="cs-picture cs-picture1">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port2-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port2.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port2.jpg"
+        alt="new kitchen"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+    <picture class="cs-picture cs-picture2">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port5-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port5.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port5.jpg"
+        alt="apartment addition"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+    <picture class="cs-picture cs-picture3">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port8-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port8.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port8.jpg"
+        alt="kew kitchen cabinets"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+  </div>
+ 
+  <div class="cs-row cs-row-3">
+    
+    <picture class="cs-picture cs-picture1">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port3-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port3.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port3.jpg"
+        alt="new kitchen"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+    <picture class="cs-picture cs-picture2">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port6-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port6.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port6.jpg"
+        alt="apartment addition"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+    <picture class="cs-picture cs-picture3">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/portfolio/port9-m.jpg"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/portfolio/port9.jpg"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/portfolio/port9.jpg"
+        alt="kew kitchen cabinets"
+        loading="lazy"
+        width="400"
+        height="560"
+      />
+    </picture>
+  </div>
+</BaseLayout>
+<a href="/projects" class="cs-button-solid">View all projects</a>
+
+-->
+
+  <!-- ============================================ -->
+  <!--                   Reviews                    -->
+  <!-- ============================================ -->
+
+  <Review />
+  <CTA />
+
+  <style lang="scss">
+    /* Desktop Parallax Effect - 1300px */
+    @media only screen and (min-width: 81.25em) {
+      .bg-ww {
+        position: absolute;
+        background: url("/assets/ww.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* creates parallax effect on background image */
+        background-attachment: fixed;
+        top: 30%;
+        left: 5rem;
+        height: 500px;
+        background-color: #c8c8c8; /* Sets the fill color */
+        mask-image: url("/assets/ww.svg");
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        background-repeat: repeat-x;
+        /* creates parallax effect on background image */
+        background-attachment: fixed;
+      }
+    }
+
+    /* Dark Mode */
+    @media only screen and (min-width: 0em) {
+      body.dark-mode {
+        .hero__wrap {
+          .cs-background {
+            &:before {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+
+    /*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+    /* Mobile */
+    @media only screen and (min-width: 0em) {
+      .services {
+        width: 90%;
+        max-width: 82.5em;
+        margin: auto;
+        // margin-top: -10.4375em;
+        margin-bottom: 3.125em;
+        padding: 3.125em 1.25em;
+        background: #fff;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+        border-top: 0.375em solid var(--primary);
+        border-radius: 0.3125em;
+        position: relative;
+        z-index: 100;
+
+        .card {
+          width: 100%;
+          max-width: 22.3125em;
+          margin: auto;
+          margin-bottom: 3.125em;
+          display: block;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          picture {
+            width: 5.5em;
+            height: 5.5em;
+            margin: auto;
+            margin-bottom: 1.4375em;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 3em;
+              height: 3em;
+            }
+          }
+
+          h2 {
+            font-size: 2em;
+            font-weight: 700;
+            line-height: 1.35em;
+            text-align: center;
+            margin-bottom: 0.65em;
+            color: #1a1a1a;
+          }
+
+          p {
+            line-height: 1.3333em;
+            text-align: center;
+            width: 100%;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    /* Inbetween */
+    @media only screen and (min-width: 768px) {
+      .services {
+        font-size: min(1.8vw, 1em);
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .card {
+          max-width: 20.3125em;
+          margin: 0;
+        }
+      }
+    }
+
+    /* Large Desktop */
+    @media only screen and (min-width: 1300px) {
+      .services {
+        padding: 3.125em 5em;
+
+        .card {
+          max-width: 22.3125em;
+        }
+      }
+    }
+
+    /* Dark mode */
+    @media only screen and (min-width: 0em) {
+      body.dark-mode {
+        #services {
+          background: var(--medium);
+
+          picture {
+            background: var(--primaryDark);
+          }
+
+          h2 {
+            font-weight: bold;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    /* PAGE-SPECIFIC STYLES FOR THE HOME PAGE */
+
+    /*-- -------------------------- -->
+<---       Side By Side         -->
+<--- -------------------------- -*/
+
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0em) {
+      .sbs {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+          width: 100%;
+          max-width: 80rem;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          row-gap: 2.5rem;
+        }
+
+        .cs-left {
+          /* scaling the font size with the view width */
+          font-size: min(2.31vw, 0.7em);
+          /* using ems so we can use font size to scale the whole section */
+          width: 39.4375em;
+          height: 39.75em;
+          position: relative;
+        }
+
+        .cs-picture {
+          border-radius: 1.5em;
+          display: block;
+          position: absolute;
+          /* clips img tag corners */
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            /* makes image act like a background image */
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .cs-picture1 {
+          width: 32.625em;
+          height: 36.3125em;
+          top: 0;
+          left: 0;
+        }
+
+        .cs-picture2 {
+          width: 25.875em;
+          height: 25em;
+          background-color: #fff;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
+          /* 6px - 12px */
+          border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
+          right: 0;
+          bottom: 0;
+        }
+
+        .cs-right {
+          max-width: 33.875rem;
+          margin: auto;
+
+          h2,
+          h3,
+          h4,
+          p {
+            color: var(--bodyTextColorWhite);
+          }
+        }
+
+        .cs-flex-group {
+          /* 16px - 32px */
+          padding: clamp(1rem, 3vw, 2rem);
+          background-color: #f7f7f7;
+          border-radius: 1rem;
+          position: fixed;
+
+          p {
+            color: var(--bodyTextColor);
+          }
+        }
+
+        .cs-flex-p {
+          /* 14px - 16px */
+          font-size: clamp(0.875rem, 1.5vw, 1rem);
+          line-height: 1.5em;
+          margin: 0 0 1rem;
+          color: #353535;
+          position: relative;
+          z-index: 5;
+        }
+
+        .cs-name {
+          font-size: 1rem;
+          font-weight: bold;
+          line-height: 1.2em;
+          text-transform: uppercase;
+          margin: 0 0 0.25rem;
+          color: var(--headerColor);
+          display: block;
+        }
+      }
+    }
+
+    /*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+    /* Mobile - 360px - Contains hover animation */
+    @media only screen and (min-width: 0em) {
+      #gallery {
+        /* Centers button */
+        text-align: center;
+        padding: var(--sectionPadding);
+        position: relative;
+        /* Prevents overflow from the image going off screen */
+        overflow: hidden;
+
+        .cs-container {
+          width: 100%;
+          max-width: 82.625em; // Converted from (1322/16em)
+          margin: auto;
+        }
+
+        .cs-topper {
+          text-align: center;
+          margin-bottom: 1rem; // Converted from (16/16rem)
+        }
+
+        .cs-title {
+          text-align: center;
+          max-width: 38.8125rem; // Converted from (621/16rem)
+          margin-bottom: 2.5rem; // Converted from (40/16rem)
+        }
+
+        .cs-image-group {
+          /* used rem so it doesn't scale with the font size of on parent */
+          font-size: min(1.1vw, 1em);
+          width: 100%;
+          max-width: 82.625em; // Converted from (1322/16em)
+          margin: 0 auto 3.75rem; // Converted from (60/16rem)
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 1.875em; // Converted from (30/16em)
+        }
+
+        .cs-row {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1.875em; // Converted from (30/16em)
+        }
+
+        .cs-picture {
+          display: block;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+        }
+
+        .cs-row-1 {
+          .cs-picture1 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 35.4375em; // Converted from (567/16em)
+          }
+
+          .cs-picture2 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 39.3125em; // Converted from (629/16em)
+          }
+
+          .cs-picture3 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 32em; // Converted from (512/16em)
+          }
+        }
+
+        .cs-row-2 {
+          .cs-picture1 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 30.75em; // Converted from (492/16em)
+          }
+
+          .cs-picture2 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 32.3125em; // Converted from (517/16em)
+          }
+
+          .cs-picture3 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 39.3125em; // Converted from (629/16em)
+          }
+        }
+
+        .cs-row-3 {
+          .cs-picture1 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 39.0625em; // Converted from (625/16em)
+          }
+
+          .cs-picture2 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 28.25em; // Converted from (452/16em)
+          }
+
+          .cs-picture3 {
+            width: 26.25em; // Converted from (420/16em)
+            height: 39.3125em; // Converted from (629/16em)
+          }
+        }
+      }
+    }
+
+    /* Dark mode */
+    @media only screen and (min-width: 0em) {
+      body.dark-mode {
+        #gallery {
+          .cs-title {
+            color: var(--bodyTextColorWhite);
+          }
+        }
+      }
+    }
+
+    /*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0em) {
+      #reviews {
+        /* Centers the button */
+        text-align: center;
+        padding: var(--sectionPadding);
+
+        .cs-container {
+          width: 100%;
+          max-width: 69rem;
+          margin: auto;
+        }
+
+        .cs-topper {
+          text-align: center;
+          margin-bottom: 0;
+        }
+
+        .cs-title {
+          text-align: center;
+          max-width: 43.75rem;
+        }
+
+        .cs-text {
+          text-align: center;
+          max-width: 40.625rem;
+          /* 88px - 104px */
+          margin-bottom: clamp(5.5em, 10.2vw, 6.5em);
+        }
+
+        .cs-card-group {
+          /* 48px - 64px */
+          margin: 0 auto clamp(3rem, 5vw, 4rem);
+          padding: 0;
+        }
+
+        .cs-item {
+          text-align: left;
+          list-style: none;
+          width: 100%;
+          max-width: 33.875rem; // Converted from (542/16rem)
+          margin: 0 auto 4rem; // Converted from (64/16rem)
+          /* Prevents padding from affecting height & width */
+          box-sizing: border-box;
+          /* Padding L & R - 16px - 32px */
+          padding: 3.75rem clamp(1rem, 3.2vw, 2rem) 0; // Converted from (60/16rem)
+          /* 32px - 40px */
+          padding-bottom: clamp(2rem, 5.4vw, 2.5rem);
+          background: #fff;
+          box-shadow: 0px 20px 39px 0px rgba(0, 0, 0, 0.05);
+          border-radius: 0.25rem; // Converted from (4/16rem)
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          position: relative;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        .cs-item-img {
+          width: 5rem; // Converted from (80/16rem)
+          height: 5rem; // Converted from (80/16rem)
+          position: absolute;
+          top: -2.5rem; // Converted from (-40/16rem)
+        }
+
+        .cs-item-p {
+          font-size: 1rem; // Converted from (16/16rem)
+          line-height: 1.5em;
+          margin: 0 0 1.25rem; // Converted from (20/16rem)
+          padding-bottom: 1.25rem; // Converted from (20/16rem)
+          color: var(--bodyTextColor);
+          border-bottom: 1px solid #e8e9ec;
+        }
+
+        .cs-reviewer {
+          font-size: 1rem; // Converted from (16/16rem)
+          font-weight: 700;
+          line-height: 1.5em;
+          width: 40%;
+          margin: 0 auto 0 0;
+          color: var(--headerColor);
+          display: block;
+        }
+
+        .cs-desc {
+          font-size: 0.875rem; // Converted from (14/16rem)
+          font-weight: 400;
+          color: var(#353535); // Retained as is (potential typo)
+          display: block;
+        }
+
+        .cs-item-stars {
+          width: 6rem; // Converted from (96/16rem)
+          height: 1rem; // Converted from (16/16rem)
+        }
+      }
+    }
+
+    /* Tablet - 768px */
+    @media only screen and (min-width: 48em) {
+      #reviews {
+        .cs-card-group {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: calc(16 / 16 * 1rem);
+        }
+
+        .cs-item {
+          /* reset margin so it won't interfere with flexbox */
+          margin: 0;
+        }
+      }
+    }
+
+    /* Dark Mode */
+    @media only screen and (min-width: 0em) {
+      body.dark-mode {
+        #reviews {
+          .cs-title,
+          .cs-text,
+          .cs-item-p,
+          .cs-reviewer {
+            color: var(--bodyTextColorWhite);
+          }
+
+          .cs-item {
+            background: var(--medium);
+          }
+
+          .cs-desc {
+            color: var(--primaryLight);
+          }
+        }
+      }
+    }
+
+    .mil-lines-place {
+      position: absolute;
+      top: -120px;
+      left: -22.5%;
+      opacity: 1;
+      margin-top: 0;
+      -webkit-transition: 0.6s;
+      transition: 0.6s;
+      -webkit-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
+    .mil-lines-place .mil-lines {
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    body {
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    body.loaded {
+      opacity: 1;
+    }
+  </style>
+
+  <style is:global>
+    .cs-title,
+    .cs-topper,
+    .cs-text,
+    .cs-button,
+    .cs-picture {
+      will-change: opacity, transform;
+    }
+
+    h1 {
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+      transform: translateY(100px);
+      opacity: 0;
+    }
+
+    .hero__wrap {
+      opacity: 0;
+      /* transform: translateY(20px); */
+    }
+
+    .cs-topper,
+    .cs-text,
+    .cs-button,
+    .cs-picture {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    /* Specific tweaks for more control */
+    .cs-title {
+      clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+      opacity: 0;
+      transform: translateY(
+        100px
+      ); /* More dramatic initial drop for the title */
+    }
+
+    .cs-button {
+      transform: translateY(30px); /* Less dramatic move for buttons */
+    }
+  </style>
+
+  <script defer>
+    function addLoadedClass() {
+      document.body.classList.add("loaded");
+      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+    }
+
+    // Initial load
+    addLoadedClass();
+
+    // Run after every page navigation
+    document.addEventListener("astro:afterRender", () => {
+      addLoadedClass();
+    });
+  </script>
+
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      // let panels = gsap.utils.toArray(".panel"),
+      //   observer = ScrollTrigger.normalizeScroll(true),
+      //   scrollTween,
+      //   currentPanelIndex = 0;
+      // document.addEventListener(
+      //   "touchstart",
+      //   (e) => {
+      //     if (
+      //       scrollTween &&
+      //       e.target.tagName !== "BUTTON" &&
+      //       e.target.tagName !== "A"
+      //     ) {
+      //       e.preventDefault();
+      //       e.stopImmediatePropagation();
+      //     }
+      //   },
+      //   { capture: true, passive: false }
+      // );
+      // function goToSection(i) {
+      //   if (scrollTween) return;
+      //   scrollTween = gsap.to(window, {
+      //     scrollTo: { y: i * innerHeight, autoKill: true },
+      //     onStart: () => observer.disable(),
+      //     onInterrupt: () => observer.enable(),
+      //     onComplete: () => {
+      //       observer.enable();
+      //       scrollTween = null;
+      //       currentPanelIndex = i;
+      //     },
+      //     duration: 1,
+      //     overwrite: true,
+      //   });
+      // }
+      // panels.forEach((panel, i) => {
+      //   ScrollTrigger.create({
+      //     trigger: panel,
+      //     start: "top bottom",
+      //     end: "+=199%",
+      //     onToggle: (self) => self.isActive && !scrollTween && goToSection(i),
+      //   });
+      // });
+      // ScrollTrigger.create({
+      //   start: 0,
+      //   end: "max",
+      //   snap: {
+      //     snapTo: 1 / (panels.length - 1),
+      //     duration: { min: 0.2, max: 0.3 },
+      //     delay: 0.2,
+      //     ease: "power1.inOut",
+      //   },
+      // });
+      // f;
+      // window.addEventListener("resize", () => {
+      //   gsap.set(window, {
+      //     scrollTo: { y: currentPanelIndex * window.innerHeight },
+      //   });
+      // });
+    });
+  </script>
+
+  <client:only>
+    <script is:inline defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        let tl = gsap.timeline({
+          defaults: { ease: "power4.out", duration: 1 },
+        });
+
+        tl.to(".hero__wrap", {
+          opacity: 1,
+
+          duration: 0.3,
+        });
+
+        tl.to(".cs-title", {
+          "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+          opacity: 1,
+          transform: "translateY(0)",
+          duration: 0.3,
+        });
+
+        // Start animation for .cs-text
+        tl.to(
+          ".cs-text",
+          {
+            opacity: 1,
+            transform: "translateY(0)",
+            duration: 0.3,
+          },
+          "startTextAndPic"
+        ) // Label this point in the timeline
+
+          // Start animation for .cs-picture at the same time as .cs-text
+          .to(
+            ".cs-picture",
+            {
+              opacity: 1,
+              transform: "translateY(0)",
+              duration: 0.5,
+            },
+            "startTextAndPic"
+          ); // Use the same label to synchronize their start
+
+        // Continue with animations for other elements, if necessary
+        tl.to(".cs-topper", {
+          opacity: 1,
+          transform: "translateY(0)",
+          duration: 0.3,
+        });
+
+        tl.to(".cs-button", {
+          opacity: 1,
+          transform: "translateY(0)",
+          stagger: 0.2,
+        });
+
+        // Optional: Add parallax effect tied to scroll
+        const flexGroup = document.querySelector(".cs-flex-group");
+        const picture = document.querySelector(".cs-picture");
+
+        let debounceTimer;
+        window.addEventListener("scroll", () => {
+          clearTimeout(debounceTimer);
+          debounceTimer = setTimeout(() => {
+            const scrollTop =
+              window.pageYOffset || document.documentElement.scrollTop;
+            const flexGroupTranslateX = scrollTop * -0.3;
+            const pictureTranslateX = scrollTop * 0.3;
+            flexGroup.style.transform = `translateX(${flexGroupTranslateX}px)`;
+            picture.style.transform = `translateX(${pictureTranslateX}px)`;
+          }, 10); // Delay in milliseconds, adjust based on performance needs
+        });
+      });
+    </script>
+  </client:only>
+</BaseLayout>

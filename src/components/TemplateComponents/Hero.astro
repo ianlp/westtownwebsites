@@ -1,0 +1,525 @@
+<section id="hero" class="hero panel">
+  <article class="hero__wrap">
+    <div class="cs-container">
+      <div class="cs-flex-group">
+        <p class="cs-topper">Invest in your online presence</p>
+        <p class="cs-topper hide">
+          Attract More Customers with a Custom Website
+        </p>
+        <p class="cs-topper hide">
+          Boost Your Business with a Powerful Online Presence
+        </p>
+        <p class="cs-topper hide">Don't Let Your Website Hold You Back</p>
+        <h1 class="cs-title" id="headline">
+          Don't Get Judged.<br />
+          Get Customers.
+        </h1>
+        <p class="cs-text-alt">
+          Attract More Customers, Save Time, and Stand Out Online
+        </p>
+        <h2 class="cs-text">
+          <span class="cs-topper--highlight">Elevate Your Small Business</span> with
+          Expertly Hand-Coded Websites from <span class="cs-topper--highlight"
+            >$175/Month</span
+          >
+        </h2>
+
+        <a href="/about" class="cs-button cs-button-solid">Explore More</a>
+        <a
+          href="/contact"
+          class="cs-button cs-button-bg"
+          aria-label="Get in Touch with us"
+        >
+          Let's Get Started
+        </a>
+      </div>
+      <figure aria-hidden="true" class="bg-ww"></figure>
+    </div>
+
+    <!-- Background Image -->
+    <div class="diagonal-container" aria-hidden="true">
+      <div class="diagonal-part diagonal-part--1"></div>
+      <div class="diagonal-part diagonal-part--2"></div>
+      <div class="diagonal-part diagonal-part--3">
+        <div class="diagonal-part-lower"></div>
+      </div>
+      <div class="diagonal-part diagonal-part--4"></div>
+    </div>
+    <picture class="cs-picture">
+      <source
+        media="(max-width: 600px)"
+        srcset="/assets/images/hero/hero-1m.webp"
+      />
+      <source
+        media="(min-width: 601px)"
+        srcset="/assets/images/hero/hero-1d.webp"
+      />
+      <img
+        aria-hidden="true"
+        decoding="async"
+        src="/assets/images/hero-1m.jpg"
+        alt="Sceptical person judging your websites's appearance"
+        loading="eager"
+        class="hero-image"
+      />
+    </picture>
+    <script is:inline>
+      document.addEventListener("DOMContentLoaded", () => {
+        const picture = document.querySelector(".cs-picture");
+        window.addEventListener("scroll", () => {
+          const scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          // Adjust these values to control the parallax intensity
+          const flexGroupTranslateX = scrollTop * -0.3;
+          const pictureTranslateX = scrollTop * 0.3;
+
+          flexGroup.style.transform = `translateX(${flexGroupTranslateX}px)`;
+          picture.style.transform = `translateX(${pictureTranslateX}px)`;
+        });
+      });
+    </script>
+  </article>
+</section>
+
+<script is:inline defer>
+  document.addEventListener("DOMContentLoaded", () => {
+    const headline = document.getElementById("headline");
+
+    // Split the text into individual characters
+    const chars = [...headline.textContent].map((char) => {
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char; // Handle spaces
+      headline.appendChild(span);
+      return span;
+    });
+
+    // Clear the original text content
+    headline.textContent = "";
+
+    // Re-append the characters as span elements
+    chars.forEach((span) => headline.appendChild(span));
+
+    // Animate the characters with GSAP
+    gsap.from(chars, {
+      duration: 1,
+      opacity: 0,
+      scale: 0.5,
+      y: 50,
+      stagger: 0.05,
+      ease: "back.out(1.7)",
+    });
+  });
+</script>
+
+<style lang="scss">
+  .bg-ww {
+  }
+
+  .hero {
+    height: calc(100vh - 0px);
+    width: 100%;
+    margin-bottom: -3px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--primary);
+    overflow: hidden;
+    z-index: 4 s;
+
+    @media (max-width: 47.99rem) and (max-height: 932px) {
+      //height: calc(100vh - 75px);
+    }
+
+    @media (min-width: 48rem) {
+      // height: calc(100vh - 125px);
+    }
+  }
+
+  .hero__wrap {
+    font-family: "Roboto", "Arial", sans-serif;
+    text-align: center;
+    /* changes on tablet */
+    padding: 0 1rem;
+    height: 100%;
+
+    z-index: 1;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+
+    .cs-picture {
+      /* Background Image */
+      width: 100%;
+      max-height: 70%;
+      height: 100%;
+      display: block;
+      position: fixed;
+      bottom: -20%;
+      right: 0;
+      z-index: 1;
+    }
+
+    .hero-image {
+      width: auto;
+      height: 100%;
+
+      object-fit: cover;
+      position: absolute;
+      bottom: 0;
+      right: 4%;
+
+      @media (max-width: 47.99rem) and (max-height: 932px) {
+      }
+    }
+
+    .cs-container {
+      width: 100%;
+      max-width: 80em;
+      margin: auto;
+      height: 100vh;
+      padding: clamp(9em, 25.95vw, 17.5em) 0;
+      // position: fixed;
+      z-index: 3;
+
+      &:before {
+        /* Left Line */
+        content: "";
+        width: 1px;
+        height: 100%;
+        background: -moz-linear-gradient(
+          top,
+          rgba(250, 251, 252, 0.5) 0%,
+          rgba(250, 251, 252, 0) 100%
+        ); /* FF3.6-15 */
+        background: -webkit-linear-gradient(
+          top,
+          rgba(250, 251, 252, 0.5) 0%,
+          rgba(250, 251, 252, 0) 100%
+        ); /* Chrome10-25,Safari5.1-6 */
+        opacity: 1;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @media (max-width: 47.99rem) and (max-height: 667px) {
+        padding-top: 0;
+      }
+
+      @media (max-width: 47.99rem) and (max-height: 896px) {
+        padding-top: 5em;
+      }
+    }
+
+    .cs-flex-group {
+      width: 80vw;
+      /* 464px - 562px */
+      max-width: clamp(29em, 60vw, 43.125em);
+      margin: auto;
+      /* 60px - 220px */
+      margin-bottom: clamp(3.75em, 15.5vw, 13.75em);
+      box-sizing: border-box;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      position: fixed;
+      z-index: 5;
+    }
+
+    .cs-topper {
+      text-align: center;
+      margin-bottom: 0;
+      color: var(--primaryLight);
+      margin-bottom: 1rem;
+    }
+
+    // .cs-topper .cs-topper--highlight,
+    // .cs-title .cs-topper--highlight,
+    // .cs-text .cs-topper--highlight {
+    //   color: var(--accent-coral);
+    // }
+
+    .cs-title {
+      text-align: left;
+      width: 100%;
+      color: var(--primary);
+      font-family: "Gilmer-Regular", "Roboto", "Arial";
+      --headerFontSize: clamp(1.9375rem, 7vw, 5.0625rem);
+      line-height: 1;
+      position: relative;
+      z-index: 5;
+    }
+
+    .cs-text {
+      text-align: left;
+      /* 32px - 40px */
+      margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+      /* 40px - 48px */
+      margin-bottom: clamp(2.5rem, 4vw, 3rem);
+      color: var(--primary);
+      font-family: "Gilmer-Regular", "Roboto", "Arial";
+    }
+
+    .cs-text-alt {
+      text-align: left;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .cs-button-solid {
+      line-height: clamp(2.875em, 5.5vw, 3.5em);
+      height: initial;
+      margin-bottom: 1rem;
+    }
+
+    .cs-button-bg {
+      line-height: clamp(2.875em, 5.5vw, 3.5em);
+      width: auto;
+      height: clamp(2.875em, 5.5vw, 3.5em);
+      padding: 0 1rem;
+      color: #fff;
+      background-color: var(--accent-coral);
+      border: 1px solid var(--bodyTextColorWhite);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .cs-button-transparent {
+      font-size: 1rem;
+      font-weight: 700;
+      /* 46px - 56px */
+      line-height: clamp(2.875em, 5.5vw, 3.5em);
+      text-decoration: none;
+      width: 11.25rem;
+      /* 46px - 56px */
+      height: clamp(2.875em, 5.5vw, 3.5em);
+      margin: 0 0.5rem;
+      box-sizing: border-box;
+      padding: 0;
+      color: var(--bodyTextColor);
+      background-color: transparent;
+      border: 1px solid var(--bodyTextColorWhite);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: "";
+        background: #000;
+        opacity: 1;
+        display: block;
+        position: absolute;
+        /* so it sits on top of the border */
+        top: -1px;
+        right: -1px;
+        bottom: -1px;
+        left: -1px;
+        z-index: -1;
+        /* this is what creates the grow affect on hover */
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+      }
+
+      &:hover {
+        color: var(--bodyTextColorWhite);
+
+        &:before {
+          transform: scaleX(1);
+        }
+      }
+
+      .cs-img {
+        margin-right: 0.75rem;
+        display: block;
+      }
+    }
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48em) {
+    .hero__wrap {
+      /* 32px - 40px */
+      padding: 0 clamp(2em, 5vw, 2.5em);
+
+      .cs-container {
+        padding: clamp(7em, 18.95vw, 17.5em) 0 clamp(9em, 30.95vw, 23.5em) 0;
+        max-width: 80em;
+        margin: auto;
+        // &:after {
+        //   /* Right Line */
+        //   content: "";
+        //   width: 1px;
+        //   height: 100%;
+        //   background: -moz-linear-gradient(
+        //     top,
+        //     rgba(250, 251, 252, 0) 0%,
+        //     rgba(250, 251, 252, 0.5) 100%
+        //   ); /* FF3.6-15 */
+        //   background: -webkit-linear-gradient(
+        //     top,
+        //     rgba(250, 251, 252, 0) 0%,
+        //     rgba(250, 251, 252, 0.5) 100%
+        //   ); /* Chrome10-25,Safari5.1-6 */
+        //   opacity: 1;
+        //   display: block;
+        //   position: absolute;
+        //   top: 0;
+        //   right: 0;
+        // }
+      }
+
+      .cs-picture {
+        max-height: 100%;
+        bottom: -8rem;
+        right: -16rem;
+      }
+
+      .cs-button-solid {
+        margin-right: 1.25rem;
+        margin-bottom: 0;
+      }
+
+      .cs-text {
+        max-width: 90%;
+      }
+    }
+
+    .hero .cs-flex-group {
+      margin: 0;
+      width: 120vw;
+    }
+  }
+
+  @media only screen and (min-width: 64em) {
+    .hero__wrap {
+      .cs-picture {
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .hero .cs-flex-group {
+      width: 150vw;
+      max-width: clamp(29em, 70vw, 45.125em);
+    }
+
+    // .hero .cs-container {
+    //   max-width: 90em;
+    // }
+  }
+</style>
+
+<style lang="scss">
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateX(0) rotate(-25deg); /* Keep the rotation */
+    }
+    50% {
+      transform: translateX(-40px) rotate(-25deg); /* Combine translation with rotation */
+    }
+  }
+
+  @keyframes glare {
+    0% {
+      top: -120%; /* Start off the top */
+    }
+    100% {
+      top: 120%; /* Move to the bottom */
+    }
+  }
+
+  .diagonal-container {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .diagonal-part {
+    width: 100%;
+    height: 130%;
+    position: absolute;
+    background: linear-gradient(to bottom, #748d92, #fff);
+    max-width: 233px;
+    bottom: -120px;
+    transform: rotate(-25deg);
+    z-index: 2;
+    pointer-events: none;
+    //   border-left: 1px solid #ffa07a;
+
+    z-index: 0;
+  }
+
+  .diagonal-part--1 {
+    right: 100%;
+    opacity: 0.1;
+    z-index: 1;
+    background: linear-gradient(to bottom, #8a9ba0, #fff);
+    opacity: 0.15;
+    border-left: none;
+  }
+
+  .diagonal-part--2 {
+    right: 96%;
+    opacity: 0.65;
+    z-index: 2;
+    background: linear-gradient(to right, #c0cdd0, #fff);
+  }
+
+  .diagonal-part--3 {
+    right: 32%;
+    background: linear-gradient(to left, #fff, #c0cdd0);
+    opacity: 1.3;
+    z-index: 1;
+    top: -7rem;
+    //   box-shadow: 0 0 20px rgba(166, 179, 197, 0.2);
+
+    @media screen and (min-width: 63.75rem) {
+      top: -8.2rem;
+    }
+  }
+
+  .diagonal-part--3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 3px;
+    height: 120%;
+    background: var(--accent-coral);
+    animation: glare 4s ease-in-out infinite;
+  }
+
+  .diagonal-part--4 {
+    right: -15%;
+    opacity: 0.95;
+    bottom: -50px;
+    z-index: 0;
+    background: linear-gradient(to left, #c0cdd0, #fff);
+    animation: float 10s ease-in-out infinite;
+  }
+
+  .diagonal-part-lower {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    pointer-events: none;
+    background: linear-gradient(
+      to top,
+      #c0cdd0 20%,
+      rgba(255, 255, 255, 0.8) 60%
+    );
+  }
+</style>

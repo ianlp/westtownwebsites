@@ -1,0 +1,226 @@
+---
+
+---
+
+<section class="services">
+  <article>
+    <div class="services__intro">
+      <p>
+        At Westtown Websites, we deliver more than just websites—we build online
+        experiences that help your business grow. Specializing in custom,
+        performance-driven, and SEO-friendly web design, we craft solutions that
+        not only showcase your brand but also improve your search engine
+        visibility and user experience.
+      </p>
+    </div>
+  </article>
+</section>
+<section class="services services--grid">
+  <article>
+    <div class="services__intro">
+      <h3 class="services__heading">What We Offer</h3>
+      <p class="services__subheading">
+        Tailored Web Design and Development Solutions for Small Businesses
+      </p>
+    </div>
+  </article>
+
+  <div id="services-list" class="services__grid" role="list">
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">Tailored Web Design for Your Brand</h3>
+      <p class="services__item-description">
+        We don’t do cookie-cutter designs. Our websites are crafted specifically
+        for your business, reflecting your brand’s unique personality while
+        being fully responsive. Whether on desktop or mobile, your site will
+        look stunning and professional.
+      </p>
+    </div>
+
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">Fast, Clean, and Efficient Code</h3>
+      <p class="services__item-description">
+        Our front-end development focuses on delivering a seamless user
+        experience with performance in mind. Every line of code is hand-written
+        to ensure your website loads quickly, runs smoothly, and performs
+        optimally—giving your visitors an experience that keeps them coming
+        back.
+      </p>
+    </div>
+
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">
+        Make Your Website Accessible to Everyone
+      </h3>
+      <p class="services__item-description">
+        We build websites that are accessible to all users, meeting the latest
+        ADA compliance standards. From optimized navigation to screen-reader
+        compatibility, we ensure that everyone, regardless of ability, can
+        interact with your site with ease.
+      </p>
+    </div>
+
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">Engaging, Branded Email Templates</h3>
+      <p class="services__item-description">
+        Boost your email marketing with custom-designed, responsive templates.
+        We create emails that align with your brand and perform flawlessly
+        across devices, increasing your open and click-through rates.
+      </p>
+    </div>
+
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">
+        Comprehensive SEO & Accessibility Audits
+      </h3>
+      <p class="services__item-description">
+        Ensure your site is optimized for search engines and accessible to all.
+        We perform in-depth audits, pinpointing areas for improvement in SEO
+        rankings, load times, and ADA compliance to help you stay competitive.
+      </p>
+    </div>
+
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">
+        AI Chatbots for Better Customer Engagement
+      </h3>
+      <p class="services__item-description">
+        Offer your customers instant support with AI-powered chatbots. We
+        integrate intelligent chat solutions that can answer queries, streamline
+        sales, and improve overall customer experience, available 24/7.
+      </p>
+    </div>
+
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">Custom E-commerce Integration</h3>
+      <p class="services__item-description">
+        Ready to sell online? We design and build e-commerce platforms tailored
+        to your products, ensuring a smooth and secure shopping experience for
+        your customers.
+      </p>
+    </div>
+
+    <div class="services__item" role="listitem">
+      <h3 class="services__item-title">Speed Up and Optimize Your Website</h3>
+      <p class="services__item-description">
+        Website speed is crucial for retaining visitors. We optimize your site's
+        performance to ensure fast load times, reduced bounce rates, and
+        improved user engagement.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .services {
+    padding: 50px 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 6;
+    border-top: 3px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
+
+    @media (min-width: 1050px) {
+    }
+  }
+
+  .services.services--grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 50px;
+    border: none;
+
+    article {
+      border-top: 1px solid var(--secondaryBgLight);
+      //border-bottom: 1px solid var(--secondaryBgLight);
+    }
+
+    @media (min-width: 1050px) {
+      //max-width: 1400px;
+      grid-template-columns: 33% 66%;
+
+      article {
+        border-top: none;
+      }
+    }
+  }
+
+  .services__intro {
+    text-align: left;
+    margin-bottom: 40px;
+
+    // &:nth-of-type(1) {
+    //   grid-column: 1 / -1; /* Span across both columns */
+    //   width: 100%; /* Ensure it takes full width */
+    // }
+
+    // &:nth-of-type(2) {
+    //   grid-column: 1 / span 1; /* Stay in the first column on large screens */
+    // }
+  }
+
+  .services__heading {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-top: 2rem;
+  }
+
+  .services__subheading {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    font-size: calc(24 / 16 * 1rem);
+
+    @media (min-width: 48rem) {
+      font-size: calc(28 / 16 * 1rem);
+    }
+  }
+
+  .services__btn {
+    background-color: var(--accent-orange);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .services__btn--all {
+    display: block;
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+
+    @media (min-width: 1050px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column: 2 / span 1;
+    }
+  }
+
+  .services__item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .services__item-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #2e3944; /* Adjust color */
+  }
+
+  .services__item-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555; /* Adjust color */
+  }
+</style>

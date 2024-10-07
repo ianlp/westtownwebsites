@@ -1,0 +1,15 @@
+{
+	"name": "Code Stitch Web Designs",
+	"email": "ian@ianfromchicago.com",
+	"phoneForTel": "773-773-0686",
+	"phoneFormatted": "(773) 773-0686",
+	"address": {
+		"lineOne": "First Address Line",
+		"lineTwo": "Second Address Line",
+		"city": "Chicago",
+		"state": "Il",
+		"zip": "60622",
+		"mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+	},
+	"domain": "www.westtownwebsites.com"
+}

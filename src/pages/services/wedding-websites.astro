@@ -1,0 +1,235 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Create Your Dream Wedding Website</h1>
+      <p>
+        Custom wedding websites designed to reflect your love story and simplify
+        your big day.
+      </p>
+      <a href="#contact" class="cta-button">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="container">
+      <h2>Why Settle for a Generic Wedding Website?</h2>
+      <p>
+        Your love story is one of a kind, so why should your wedding website be
+        any different? We believe your site should be just as unique as your
+        journey together. With a custom wedding website, you can do more than
+        share your details—you can showcase your style, manage your RSVPs
+        effortlessly, and give your guests a personalized experience they’ll
+        never forget. From interactive timelines to custom galleries, we create
+        websites that are beautiful, functional, and completely tailored to you.
+      </p>
+    </div>
+  </section>
+
+  <!-- What We Offer (Features) -->
+  <section class="features">
+    <div class="container">
+      <h2>What We Offer</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Custom RSVP & Guest Management</h3>
+          <p>
+            Manage RSVPs with custom forms and track guest information easily.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Event Timeline & Countdown</h3>
+          <p>
+            Share your wedding schedule and important event details with an
+            interactive timeline.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Gift Registry Integration</h3>
+          <p>
+            Link all your registries in one place and make it easy for guests to
+            choose a gift.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Post-Wedding Photo Galleries</h3>
+          <p>
+            Share photos and memories from your big day with an easy-to-browse
+            gallery.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Custom Domains & Email Invitations</h3>
+          <p>
+            Personalize your website with a custom domain and matching email
+            invitations.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Live Streaming & Virtual Guestbook</h3>
+          <p>
+            Allow guests to participate remotely and leave messages in a digital
+            guestbook.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works">
+    <div class="container">
+      <h2>Our Simple Process</h2>
+      <div class="process-steps">
+        <div class="step">
+          <h3>Consultation</h3>
+          <p>
+            We discuss your vision, wedding details, and features to create your
+            perfect site.
+          </p>
+        </div>
+        <div class="step">
+          <h3>Design</h3>
+          <p>
+            Our team creates a unique design that reflects your wedding theme
+            and style.
+          </p>
+        </div>
+        <div class="step">
+          <h3>Launch</h3>
+          <p>
+            We launch your website and provide ongoing support until your big
+            day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing">
+    <div class="container">
+      <h2>Packages Designed for Every Couple</h2>
+      <div class="pricing-table">
+        <div class="pricing-option">
+          <h3>Basic Package</h3>
+          <p>Custom design, RSVP system, guest management, and more</p>
+          <span class="price">$???</span>
+          <ul>
+            <li>Up to 3 pages</li>
+            <li>Event timeline</li>
+            <li>Custom domain</li>
+            <li>Mobile-friendly</li>
+          </ul>
+        </div>
+
+        <div class="pricing-option">
+          <h3>Standard Package</h3>
+          <p>Includes gift registry integration, photo gallery, and more</p>
+          <span class="price">$???</span>
+          <ul>
+            <li>Up to 10 pages</li>
+            <li>Advanced RSVP system</li>
+            <li>Custom photo gallery</li>
+            <li>Custom email invitations</li>
+          </ul>
+        </div>
+
+        <div class="pricing-option">
+          <h3>Premium Package</h3>
+          <p>
+            Full package with live streaming, post-wedding updates, and more
+          </p>
+          <span class="price">$???</span>
+          <ul>
+            <li>Unlimited pages</li>
+            <li>Live streaming integration</li>
+            <li>Virtual guestbook</li>
+            <li>Advanced photo/video gallery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>What Couples Are Saying</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p>
+            "Our wedding website was absolutely perfect! The custom RSVP system
+            made managing our guest list so easy." — Sarah & John
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "We loved the personalized design that reflected our wedding theme.
+            Guests were blown away!" — Mylo & Cleo
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Start Creating Your Perfect Wedding Website Today</h2>
+      <form action="/submit" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="wedding-date">Wedding Date:</label>
+        <input type="date" id="wedding-date" name="wedding-date" required />
+
+        <label for="services">Interested Services:</label>
+        <textarea
+          id="services"
+          name="services"
+          placeholder="Tell us what you're interested in..."
+          required></textarea>
+
+        <button type="submit" class="cta-button">Get Started</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: url("/path-to-hero-image.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      background-color: #ff5733;
+      color: white;
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 5px;
+    }
+  }
+</style>

@@ -1,0 +1,38 @@
+---
+// Import frameworks or utilities if needed
+const videoPath = Astro.props.videoPath;
+const posterPath = Astro.props.posterPath;
+---
+
+<video id="video-background" muted loop playsinline poster={posterPath}>
+  <source src={videoPath} type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<style>
+  #video-background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    object-fit: cover;
+    background-size: cover;
+    mix-blend-mode: overlay;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const videoElement = document.getElementById("video-background");
+    videoElement.load();
+    videoElement.addEventListener("loadeddata", () => {
+      if (videoElement.readyState >= 3) {
+        videoElement.play();
+      }
+    });
+  });
+</script>

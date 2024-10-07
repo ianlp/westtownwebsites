@@ -1,0 +1,333 @@
+---
+
+---
+
+<section class="ib-section">
+  <h3>Comprehensive Web Solutions for Small Businesses</h3>
+  <p>
+    At Westtown, we craft custom web design and development solutions tailored
+    to small businesses right here in Chicago. Every line of code is
+    meticulously hand-written to boost performance, attract more visitors, and
+    increase your business's revenue. Our all-inclusive service includes
+    hosting, management, and continuous optimization—designed to help your
+    business grow starting at just $175 a month.
+  </p>
+  <aside>
+    <!-- Section 1: Web Design & Development -->
+    <article class="ib-wrapper">
+      <div class="ib-content">
+        <h4>Web Design & Development</h4>
+        <p class="content-text">
+          Our team builds custom, high-performance websites tailored to small
+          businesses. We ensure every site is responsive, fast, and
+          user-friendly.
+        </p>
+        <ul class="services-list">
+          <li>Custom Web Design</li>
+          <li>Front-End Development</li>
+          <li>Performance Optimization</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Section 2: Accessibility, SEO & Audits -->
+    <article class="ib-wrapper">
+      <div class="ib-content">
+        <h4>Accessibility, SEO & Audits</h4>
+        <p class="content-text">
+          We help make your site accessible to all users and optimized for
+          search engines, ensuring it ranks high and complies with the latest
+          standards.
+        </p>
+        <ul class="services-list">
+          <li>Accessibility & ADA Compliance</li>
+          <li>SEO & Accessibility Audits</li>
+          <li>Email Template Design</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- Section 3: Advanced Integrations & E-commerce -->
+    <article class="ib-wrapper">
+      <div class="ib-content">
+        <h4>Advanced Integrations & E-commerce</h4>
+        <p class="content-text">
+          For businesses looking to enhance customer engagement or start selling
+          online, we offer cutting-edge solutions that make it easy to grow.
+        </p>
+        <ul class="services-list">
+          <li>AI Chatbot Integration</li>
+          <li>E-commerce Solutions</li>
+        </ul>
+      </div>
+    </article>
+  </aside>
+</section>
+
+<style lang="scss">
+  .ib-section {
+    position: relative;
+    border: 2px solid;
+    z-index: 6;
+    display: none;
+
+    background: var(--primary);
+    gap: 140px;
+    padding: 130px 0;
+    color: var(--bodyTextColorWhite);
+
+    h3,
+    p,
+    li {
+      color: var(--bodyTextColorWhite);
+    }
+  }
+
+  .ib-section > aside {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ib-wrapper {
+    width: 100%; /* Initial width */
+    min-height: 400px; /* Initial height */
+    transition:
+      width 0.5s ease,
+      height 0.5s ease;
+    overflow: hidden; /* Prevent content from overflowing during the animation */
+    border: 1px solid #f4f4f4;
+    border-radius: 8px;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  .ib-wrapper.expanded {
+    width: 100%; /* Expand to full width */
+  }
+
+  .ib-wrapper.full-height {
+    height: 100%; /* Expand to full height (full viewport height) */
+  }
+
+  .ib-content {
+    // position: absolute; /* Keep content in place */
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 100%;
+  }
+
+  .ib-content img {
+    width: 100%;
+    height: auto;
+  }
+
+  .ib-content .content-text {
+    display: none;
+  }
+
+  .ib-content .close-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .ib-wrapper.expanded .ib-content .close-btn {
+    display: block;
+  }
+</style>
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var wrapperItems = document.querySelectorAll(".ib-wrapper");
+
+      wrapperItems.forEach(function (wrapper) {
+        var content = wrapper.querySelector(".ib-content");
+
+        // Add click event to expand the wrapper
+        content.addEventListener("click", function () {
+          expandWrapper(wrapper);
+        });
+
+        // Add click event to close button
+        var closeButton = content.querySelector(".close-btn");
+        if (closeButton) {
+          closeButton.addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent click from triggering the expand event
+            collapseWrapper(wrapper);
+          });
+        }
+      });
+
+      function expandWrapper(wrapper) {
+        if (!wrapper.classList.contains("expanded")) {
+          // First expand width
+          wrapper.classList.add("expanded");
+
+          // After the width transition is done, expand the height
+          setTimeout(function () {
+            wrapper.classList.add("full-height");
+            // Optionally show the content once fully expanded
+            var contentText = wrapper.querySelector(".content-text");
+            if (contentText) {
+              contentText.style.display = "block";
+            }
+          }, 500); // Match the duration of the width transition
+        }
+      }
+
+      function collapseWrapper(wrapper) {
+        // First collapse height
+        wrapper.classList.remove("full-height");
+
+        // Optionally hide the content during collapse
+        var contentText = wrapper.querySelector(".content-text");
+        if (contentText) {
+          contentText.style.display = "none";
+        }
+
+        // After the height transition is done, collapse the width
+        setTimeout(function () {
+          wrapper.classList.remove("expanded");
+        }, 500); // Match the duration of the height transition
+      }
+    });
+  </script> -->
+
+<section class="specialty">
+  <!-- Specialty Overview -->
+  <div class="specialty__overview">
+    <h2 class="specialty__heading">Our Specialty</h2>
+    <p class="specialty__text">
+      We focus on crafting custom web design and development solutions for small
+      businesses right here in Chicago. Each line of code is meticulously
+      hand-written to optimize performance, attract more visitors to your site,
+      and increase your business's revenue.
+    </p>
+    <p class="specialty__highlight">Custom Solutions Available.</p>
+    <p class="specialty__text">
+      You own your domain, content, and profiles. Cancel anytime after 6 months
+      without hidden fees or hassle.
+    </p>
+  </div>
+
+  <!-- Call-to-Action and Guarantee -->
+  <div class="cta-guarantee">
+    <p class="cta-guarantee__text">
+      Need something bigger? We offer tailored pricing for additional pages and
+      custom needs.
+    </p>
+    <a href="#" class="cta-guarantee__btn">Book Meeting</a>
+
+    <div class="cta-guarantee__satisfaction">
+      <h3 class="cta-guarantee__heading">100% Satisfaction Guarantee</h3>
+      <p class="cta-guarantee__text">
+        Our goal is to exceed your expectations. We ensure your website will be
+        fast, optimized, and tailored to your brand's needs, with unlimited
+        edits to keep it updated and fresh.
+      </p>
+    </div>
+  </div>
+
+  <!-- Expertise Section -->
+  <div class="expertise">
+    <h3 class="expertise__heading">Our Services</h3>
+    <p class="expertise__text">
+      We are committed to transparency, innovation, and delivering outstanding
+      value to our clients.
+    </p>
+    <div class="expertise__list">
+      <span class="expertise__item">Web Design</span>
+      <span class="expertise__item">SEO Optimization</span>
+      <span class="expertise__item">Accessibility Compliance</span>
+      <span class="expertise__item">E-commerce Solutions</span>
+      <span class="expertise__item">AI Chatbot Integration</span>
+      <span class="expertise__item">Graphic Design</span>
+      <span class="expertise__item">Branding</span>
+      <span class="expertise__item">HTML Emails</span>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .specialty {
+    padding: 40px;
+    background-color: var(--secondaryBgLight);
+  }
+
+  .specialty__overview,
+  .cta-guarantee,
+  .expertise {
+    margin-bottom: 40px;
+  }
+
+  .specialty__heading {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .specialty__text {
+    color: var(--bodyTextColor);
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+
+  .specialty__highlight {
+    color: var(--accent-orange); /* Use accent color for emphasis */
+    font-weight: bold;
+  }
+
+  .cta-guarantee {
+    text-align: center;
+  }
+
+  .cta-guarantee__text {
+    margin-bottom: 10px;
+  }
+
+  .cta-guarantee__btn {
+    background-color: var(--accent-orange);
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .cta-guarantee__satisfaction {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .cta-guarantee__heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  .expertise__heading {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .expertise__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .expertise__item {
+    background-color: white;
+    color: var(--bodyTextColor);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+</style>

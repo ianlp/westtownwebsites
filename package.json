@@ -1,0 +1,32 @@
+{
+  "name": "astro-kit-less",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npm run astro dev & npx decap-server",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.8.3",
+    "@astrojs/preact": "^3.5.3",
+    "astro": "^4.12.2",
+    "astro-font": "^0.1.81",
+    "astro-icon": "^1.1.0",
+    "autoprefixer": "^10.4.19",
+    "decap-server": "^3.0.4",
+    "gsap": "^3.12.5",
+    "less": "^4.2.0",
+    "preact-render-to-string": "^5.1.19",
+    "react": "^18.3.1",
+    "sass": "^1.79.3",
+    "typescript": "^5.5.4",
+    "vercel": "^37.6.1"
+  },
+  "devDependencies": {
+    "@astrojs/renderer-preact": "^0.5.0",
+    "preact": "^10.24.1"
+  }
+}

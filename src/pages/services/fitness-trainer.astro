@@ -1,0 +1,220 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="container">
+      <h1>
+        Transform Your Fitness Business with Custom Websites & Affiliate
+        Marketing
+      </h1>
+      <p>
+        Manage clients, create custom workout programs, and grow your income
+        with our powerful trainer platform.
+      </p>
+      <a href="#contact" class="cta-button"
+        >Start Building Your Fitness Empire</a
+      >
+    </div>
+  </section>
+
+  <!-- Key Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2>Key Features for Fitness Trainers</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Client Management Dashboard</h3>
+          <p>
+            Track client progress, manage workout plans, and keep everything in
+            one place with our secure dashboard.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Custom Workout Builder</h3>
+          <p>
+            Create personalized workout routines for clients, complete with
+            video tutorials and product recommendations.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Affiliate Marketing Tools</h3>
+          <p>
+            Earn commissions by recommending fitness gear, supplements, and
+            equipment through affiliate links.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>SEO Optimization</h3>
+          <p>
+            Boost your online visibility with SEO-friendly blog content and
+            local SEO optimization for your business.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Online Booking & Scheduling</h3>
+          <p>
+            Clients can book sessions and classes directly, with automated
+            reminders to keep them on track.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h3>Email Marketing Integration</h3>
+          <p>
+            Send fitness tips, product recommendations, and training updates
+            directly to your clients' inboxes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Affiliate Marketing Section -->
+  <section class="affiliate-marketing">
+    <div class="container">
+      <h2>Grow Your Income with Affiliate Marketing</h2>
+      <p>
+        Our platform allows you to monetize your expertise by recommending the
+        best fitness gear, supplements, and equipment. Earn commissions on every
+        sale with integrated affiliate marketing tools.
+      </p>
+      <ul>
+        <li>Embed affiliate links in workout plans, blog posts, and videos.</li>
+        <li>
+          Create a curated online store featuring your favorite fitness
+          products.
+        </li>
+        <li>
+          Offer product recommendations within video tutorials and workout
+          instructions.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SEO & Content Marketing Section -->
+  <section class="seo-content-marketing">
+    <div class="container">
+      <h2>Boost Your Online Presence with SEO Tools</h2>
+      <p>
+        Our platform is built with SEO in mind, ensuring your website attracts
+        more clients organically. With tools to optimize your blog posts,
+        landing pages, and local SEO, you’ll get noticed in search results and
+        grow your business faster.
+      </p>
+      <ul>
+        <li>Create fitness blogs optimized with targeted keywords.</li>
+        <li>Develop SEO-friendly landing pages for your services.</li>
+        <li>
+          Increase visibility with local SEO optimization for your
+          location-based services.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>See How We’ve Helped Trainers Succeed</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p>
+            "The affiliate marketing tools have completely transformed my
+            business. I now earn extra income by recommending the products I
+            already love." — Sarah K.
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "The SEO optimization has brought in more clients than I ever
+            imagined. My fitness blog is ranking higher than before!" — David L.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing">
+    <div class="container">
+      <h2>Flexible Pricing Packages for Fitness Trainers</h2>
+      <div class="pricing-table">
+        <div class="pricing-option">
+          <h3>Basic Package</h3>
+          <p>Client management, workout builder, SEO optimization</p>
+          <span class="price">$100/month</span>
+        </div>
+        <div class="pricing-option">
+          <h3>Premium Package</h3>
+          <p>
+            Everything in Basic, plus affiliate marketing tools and email
+            integration
+          </p>
+          <span class="price">$200/month</span>
+        </div>
+        <div class="pricing-option">
+          <h3>Pro Package</h3>
+          <p>
+            Everything in Premium, plus full SEO tools, video hosting, and
+            product store setup
+          </p>
+          <span class="price">$350/month</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Ready to Build a Stronger Fitness Business?</h2>
+      <form action="/submit" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="package">Choose Your Package:</label>
+        <select id="package" name="package" required>
+          <option value="basic">Basic Package</option>
+          <option value="premium">Premium Package</option>
+          <option value="pro">Pro Package</option>
+        </select>
+
+        <button type="submit" class="cta-button">Start Now</button>
+      </form>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    background: url("/path-to-hero-image.jpg") no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    color: white;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      background-color: #ff5733;
+      color: white;
+      padding: 10px 30px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 5px;
+    }
+  }
+</style>

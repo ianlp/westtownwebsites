@@ -1,0 +1,225 @@
+<section class="pricing panel">
+  <div class="pricing__description">
+    <h3 class="pricing__title">
+      Flexible Website Pricing Tailored to Your Needs
+    </h3>
+    <p class="pricing__text">
+      Invest in your online presence with our flexible pricing options. Start
+      with our affordable $175/month plan for a custom five-page website. As
+      your business grows, we'll scale with you.
+    </p>
+    <ul class="pricing__benefits">
+      <li class="pricing__benefit">Custom web design tailored to your brand</li>
+      <li class="pricing__benefit">
+        Inclusive hosting, on-page SEO, and maintenance
+      </li>
+      <li class="pricing__benefit">
+        Domain registration and Google Business listing
+      </li>
+      <li class="pricing__benefit">SEO enhancements with schema markup</li>
+      <li class="pricing__benefit">Core Web Vitals optimization for speed</li>
+      <li class="pricing__benefit">Google Analytics integration</li>
+      <li class="pricing__benefit">
+        Additional services available as your needs grow
+      </li>
+    </ul>
+  </div>
+
+  <div class="pricing__tiers">
+    <article class="pricing__option pricing__option--monthly">
+      <h3 class="pricing__plan-title">$175/month</h3>
+      <p class="pricing__plan-subtitle">Perfect for Small Businesses</p>
+      <ul class="pricing__features">
+        <li class="pricing__feature">Up to 5 custom-designed pages</li>
+        <li class="pricing__feature">Unlimited content updates</li>
+        <li class="pricing__feature">Hosting and on-page SEO included</li>
+        <li class="pricing__feature">24/7 uptime monitoring</li>
+        <li class="pricing__feature">DNS management</li>
+      </ul>
+      <a href="/contact" class="button button--primary">Sign Up Now</a>
+      <p class="pricing__note">
+        Need more pages or services? <a href="/contact">Let's talk!</a>
+      </p>
+    </article>
+    <!-- One-Time Payment Plan -->
+    <article class="pricing__option pricing__option--one-time">
+      <h3 class="pricing__plan-title">One-Time Payment</h3>
+      <p class="pricing__plan-subtitle">Own Your Website Outright</p>
+      <ul class="pricing__features">
+        <li class="pricing__feature">Full ownership of your website</li>
+        <li class="pricing__feature">Custom design and complete control</li>
+        <li class="pricing__feature">Starting at $1,900</li>
+      </ul>
+      <a href="/contact" class="button button--secondary">Get a Quote</a>
+      <p class="pricing__note">Let's discuss your project and pricing.</p>
+    </article>
+    <!-- E-commerce Solutions -->
+    <article class="pricing__option pricing__option--ecommerce">
+      <h3 class="pricing__plan-title">E-commerce Solutions</h3>
+      <p class="pricing__plan-subtitle">Tailored for Online Stores</p>
+      <ul class="pricing__features">
+        <li class="pricing__feature">Custom online store design</li>
+        <li class="pricing__feature">Secure payment gateway integration</li>
+        <li class="pricing__feature">Optimized for conversions</li>
+      </ul>
+      <a href="/contact" class="button button--secondary"
+        >Request a Custom Quote</a
+      >
+      <p class="pricing__note">
+        Contact us to start building your online store.
+      </p>
+    </article>
+  </div>
+</section>
+
+<style lang="scss">
+  .pricing {
+    padding: 3.1rem;
+    position: relative;
+    z-index: 6;
+    background: #fff;
+
+    @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: auto 31rem;
+      align-items: center;
+      padding: 5.6rem 0;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1324px) {
+      display: grid;
+      grid-template-columns: auto 37rem;
+    }
+  }
+
+  .pricing-description {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  .pricing__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 48rem) {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .pricing__benefits {
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  .pricing-description h3 {
+    font-size: 2rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .pricing-description p {
+    margin-bottom: 1.5rempx;
+    color: var(--primary);
+  }
+
+  .pricing-description ul {
+    // list-style: none;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+    margin: 2rem 0 3rem 2rem;
+  }
+
+  .pricing-description ul li {
+    margin-bottom: 0.9rem;
+  }
+
+  .pricing-options {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .cs-button {
+      position: absolute;
+      right: 1rem;
+      top: 2rem;
+    }
+  }
+
+  .pricing__option {
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+  }
+
+  .pricing__option h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .pricing__option p {
+    color: #b0b0b0;
+    margin-bottom: 20px;
+  }
+
+  .pricing__option ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .pricing__option ul li {
+    font-size: 1rem;
+  }
+
+  button {
+    border: none;
+  }
+
+  /* Specific styling for each option */
+  .pricing__option--monthly {
+    background-color: var(--primary);
+
+    p,
+    li {
+      color: var(--bodyTextColorWhite);
+    }
+
+    h3,
+    a {
+      color: var(--accent-orange);
+    }
+  }
+
+  .pricing__option--one-time {
+    background-color: var(--secondaryLight);
+
+    p,
+    li {
+      color: #fff;
+    }
+
+    h3,
+    a {
+      color: var(--secondaryBgLight);
+    }
+  }
+
+  .pricing__option--ecommerce {
+    background-color: var(--secondaryBgLight);
+
+    p,
+    li {
+      color: var(--bodyTextColor);
+    }
+
+    h3,
+    a {
+      color: #093c72;
+    }
+  }
+</style>
