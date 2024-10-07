@@ -8,6 +8,6 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   site: "https://www.westtownwebsites.com/",
   integrations: [icon()],
-  output: "static",
+  output: "server",
   adapter: vercel(),
 });
