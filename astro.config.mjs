@@ -3,11 +3,11 @@ import { defineConfig } from "astro/config";
 //import preact from "@astrojs/preact";
 import icon from "astro-icon";
 
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/static";
 
 export default defineConfig({
   site: "https://www.westtownwebsites.com/",
   integrations: [icon()],
-  output: "server",
+  output: "static",
   adapter: vercel(),
 });
