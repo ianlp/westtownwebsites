@@ -1,6 +1,6 @@
 ---
 import navData from "@data/navData.json";
-import { Icon } from "astro-icon/components";
+//import { Icon } from "astro-icon/components";
 import DarkModeToggle from "@components/DarkModeToggle.astro";
 ---
 
@@ -60,7 +60,6 @@ import DarkModeToggle from "@components/DarkModeToggle.astro";
                     ]}
                   >
                     {entry.key}
-                    <Icon name="mdi--caret" class="cs-drop-icon" />
                   </button>
                 ) : (
                   // If entry does not have children in navData.json, create an anchor
